@@ -1,9 +1,12 @@
+const layout = require('./layout')
+
 module.exports = {
-  commandName: {
-    desc: '',
-    usage: '',
+  generate: {
+    desc: 'Generates a random layout',
+    usage: '>generate',
     async execute (client, msg, param, sequelize) {
-      // code here
+
+      msg.channel.send(layout.generate(7,7))
     }
   }
 }
